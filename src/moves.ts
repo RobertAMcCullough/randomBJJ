@@ -34,28 +34,6 @@ const positions = [
   'Spider guard',
 ];
 
-function getRandomValue(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
+const allMoves = [...chokes, ...armLocks, ...legLocks, ...sweeps]
 
-function getChoke() {
-  return getRandomValue(chokes);
-}
-
-function getArmLock() {
-  return getRandomValue(armLocks);
-}
-
-function getLegLock() {
-  return getRandomValue(legLocks);
-}
-
-function getSweep() {
-  return getRandomValue(sweeps);
-}
-
-function getPostion() {
-  return getRandomValue(positions);
-}
-
-module.exports = {getChoke, getArmLock, getLegLock, getSweep, getPostion}
+export { chokes, armLocks, legLocks, sweeps, positions, allMoves };
